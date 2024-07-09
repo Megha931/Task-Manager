@@ -11,8 +11,8 @@ export interface Tag {
 	description: string;
 	priority: string;
 	deadline: number;
-	image?: string; // Make image field optional
-	alt?: string; // Make alt field optional
+	image?: string; 
+	alt?: string; 
 	tags: Tag[];
   }
   
