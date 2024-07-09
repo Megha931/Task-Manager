@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { getRandomColors } from "../../helpers/getRandomColors";
-import { Tag } from "../../types"; // Ensure you have imported Tag type if defined elsewhere
+import { Tag } from "../../types";
 
 interface TaskData {
   id: string;
@@ -9,8 +9,8 @@ interface TaskData {
   description: string;
   priority: string;
   deadline: number;
-  image?: string; // Optional image field
-  alt?: string; // Optional alt text for image
+  image?: string; 
+  alt?: string; 
   tags: Tag[];
 }
 
@@ -20,7 +20,7 @@ interface AddModalProps {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   handleAddTask: (taskData: TaskData) => void;
   handleDeleteTask: (taskId: string) => void;
-  selectedTask?: TaskData; // Optional selectedTask for editing existing task
+  selectedTask?: TaskData; 
 }
 
 const AddModal = ({
@@ -42,14 +42,14 @@ const AddModal = ({
 
   const [taskData, setTaskData] = useState<TaskData>(initialTaskData);
   const [tagTitle, setTagTitle] = useState<string>("");
-  const [imageFile, setImageFile] = useState<File | null>(null); // State to hold selected image file
-  const [imagePreview, setImagePreview] = useState<string | null>(null); // State to preview image
+  const [imageFile, setImageFile] = useState<File | null>(null); 
+  const [imagePreview, setImagePreview] = useState<string | null>(null); 
 
   useEffect(() => {
     if (selectedTask) {
       setTaskData(selectedTask);
       if (selectedTask.image) {
-        setImagePreview(selectedTask.image); // Set image preview if editing existing task with image
+        setImagePreview(selectedTask.image); 
       }
     }
   }, [selectedTask]);
@@ -68,8 +68,8 @@ const AddModal = ({
       const reader = new FileReader();
       reader.onload = function (e) {
         if (e.target) {
-          setImageFile(e.target.result as string); // Store image file
-          setImagePreview(e.target.result as string); // Preview image
+          setImageFile(e.target.result as string); 
+          setImagePreview(e.target.result as string); 
         }
       };
       reader.readAsDataURL(e.target.files[0]);
@@ -103,7 +103,7 @@ const AddModal = ({
 
   const handleDelete = () => {
     if (selectedTask) {
-      handleDeleteTask(taskData.id); // Call the delete function
+      handleDeleteTask(taskData.id); 
       closeModal();
     }
   };
