@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Board } from "../../data/board";
-import { Columns } from "../../types"; // Ensure Columns and types are correctly imported
+import { Columns } from "../../types"; 
 import { onDragEnd } from "../../helpers/onDragEnd";
 import { AddOutline } from "react-ionicons";
 import AddModal from "../../components/Modals/AddModal";
