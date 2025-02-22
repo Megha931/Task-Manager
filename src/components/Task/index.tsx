@@ -12,11 +12,11 @@ interface TaskProps {
 
 const Task = ({ task, provided, handleDeleteTask, columnId }: TaskProps) => {
   const { id, title, description, priority, deadline, image, alt, tags } = task;
-  const [imagePreview, setImagePreview] = useState<string | undefined>(image); // State for image preview
+  const [imagePreview, setImagePreview] = useState<string | undefined>(image); 
 
   const deleteButtonStyle = {
-    backgroundColor: "#e0f7fa", /* Light blue */
-    color: "#00796b", /* Darker blue */
+    backgroundColor: "#e0f7fa", 
+    color: "#00796b",
     padding: "8px 12px",
     borderRadius: "4px",
     marginTop: "8px",
@@ -33,7 +33,7 @@ const Task = ({ task, provided, handleDeleteTask, columnId }: TaskProps) => {
       const reader = new FileReader();
       reader.onload = function (e) {
         if (e.target) {
-          setImagePreview(e.target.result as string); // Set image preview
+          setImagePreview(e.target.result as string); 
         }
       };
       reader.readAsDataURL(e.target.files[0]);
@@ -62,7 +62,7 @@ const Task = ({ task, provided, handleDeleteTask, columnId }: TaskProps) => {
         accept="image/*"
         className="hidden"
         id={`image-upload-${id}`}
-        style={{ display: "none" }} // Hidden by default
+        style={{ display: "none" }} 
       />
       <label
         htmlFor={`image-upload-${id}`}
@@ -73,10 +73,10 @@ const Task = ({ task, provided, handleDeleteTask, columnId }: TaskProps) => {
           width: "100%",
           padding: "8px",
           borderRadius: "4px",
-          border: "1px dashed #e0f7fa", /* Light blue border */
-          color: "#00796b", /* Darker blue text */
-          backgroundColor: "#e0f7fa", /* Light blue background */
-          textDecoration: "none", // Remove underline
+          border: "1px dashed #e0f7fa", 
+          color: "#00796b",
+          backgroundColor: "#e0f7fa", 
+          textDecoration: "none", 
         }}
       >
         {imagePreview ? "Change Image" : "Choose File"}
