@@ -1,4 +1,4 @@
-// types.ts
+
 export interface Tag {
 	title: string;
 	bg: string;
