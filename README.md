@@ -17,7 +17,7 @@ React (Vite), TypeScript, HTML, Tailwind CSS
 ## Setup Instructions
 
 clone the Repository
-git clone https://github.com/yourusername/TaskQuest.git
+https://github.com/Megha931/Task-Manager.git
 
 Install Dependencies
 npm install
