@@ -27,23 +27,20 @@ Markup: HTML
 ## 🚀 Setup Instructions
 To run this project locally, follow these steps:
 
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/Megha931/Task-Manager.git
+Clone the Repository
+
 cd Task-Manager
-2. Install Dependencies
-bash
-Copy
-Edit
+
+Install Dependencies
+
 npm install
-3. Start the Development Server
-bash
-Copy
-Edit
+
+Start the Development Server
+
 npm run dev
+
 Visit the app in your browser at:
+
 http://localhost:5173
 
 ![image](https://github.com/user-attachments/assets/544fbf08-473a-4a43-8eee-8000252eae03)
